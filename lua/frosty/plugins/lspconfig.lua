@@ -1,7 +1,12 @@
 return {
   'neovim/nvim-lspconfig',
-  dependencies = { 'hrsh7th/cmp-nvim-lsp' },
+  dependencies = { 'hrsh7th/cmp-nvim-lsp', 'williamboman/mason.nvim', 'williamboman/mason-lspconfig.nvim' },
   config = function()
+    require('mason').setup()
+    require('mason-lspconfig').setup({
+      ensure_installed = { 'lua_ls', 'rust_analyzer', 'bashls', 'gopls' }
+    })
+
     local lspconfig = require('lspconfig')
     local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
@@ -20,7 +25,10 @@ return {
       }
     })
     lspconfig['rust_analyzer'].setup({
-      capabilities = capabilities,
+      capabilities = capabilities
+    })
+    lspconfig['gopls'].setup({
+      capabilities = capabilities
     })
     lspconfig['bashls'].setup({
       capabilities = capabilities,

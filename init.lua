@@ -1,9 +1,7 @@
--- Call other files
 require('frosty.options')
 require('frosty.keymaps')
 require('frosty.autocmds')
 
--- Initialize Lazy
 local lazy_path = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
 if not (vim.uv or vim.loop).fs_stat(lazy_path) then
   vim.fn.system({

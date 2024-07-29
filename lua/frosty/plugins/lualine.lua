@@ -1,6 +1,5 @@
 return {
   'nvim-lualine/lualine.nvim',
-  dependencies = { 'nvim-tree/nvim-web-devicons', 'archibate/lualine-time' },
   opts = {
     options = {
       icons_enabled = false,

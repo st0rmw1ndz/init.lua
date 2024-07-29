@@ -35,4 +35,9 @@ vim.keymap.set('n', '<leader>l', ':Lazy<CR>')
 vim.keymap.set('n', '<leader>gg', ':Neogit<CR>')
 vim.keymap.set('n', '<leader>gc', ':Neogit commit<CR>')
 
+-- Alpha
 vim.keymap.set('n', '<leader>h', ':Alpha<CR>')
+
+-- Visual block selection movement
+vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { noremap = true })
+vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { noremap = true })
