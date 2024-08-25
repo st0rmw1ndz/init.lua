@@ -5,3 +5,4 @@ vim.o.termguicolors = true
 vim.o.showmode = false
 vim.o.clipboard = 'unnamedplus'
 vim.o.swapfile = false
+vim.g.netrw_banner = false

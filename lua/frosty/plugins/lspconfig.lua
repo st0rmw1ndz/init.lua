@@ -27,14 +27,14 @@ return {
     lspconfig['rust_analyzer'].setup({
       capabilities = capabilities
     })
-    lspconfig['gopls'].setup({
-      capabilities = capabilities
-    })
     lspconfig['bashls'].setup({
       capabilities = capabilities,
       settings = {
         filetypes = { 'sh', 'zsh' }
       }
+    })
+    lspconfig['gopls'].setup({
+      capabilities = capabilities
     })
   end
 }
